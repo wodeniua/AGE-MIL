@@ -1,0 +1,21 @@
+#opt
+B: 1                 # batch size
+warmup_epoch: 0    # number of warm-up epochs
+wd: 0.0001               # weight decay 1e-5 best
+lr: 0.0001    # 5e-6 best
+min_lr: 0
+
+#dset
+dataset: a1
+n_class: 2                            # number of classes
+mode: 'slide' 
+# data_dir: '/path/to/dataset'       # directory of dataset
+feat_dir: '/path/to/slide_features_titan/'       # directory of dataset
+n_worker: 16                          # number of workers (increased for faster parallel loading)
+pin_memory: True                     # use pin memory in dataloader (enabled for faster GPU transfer)
+n_shot: -1
+
+tritan_feat_dir: "/path/to/slide_level_h5/"  # slide-level h5 
+conch_feat_dir: "/path/to/patch_level_h5/"   # patch-level h5 
+K_PATCH: 256                                
+
